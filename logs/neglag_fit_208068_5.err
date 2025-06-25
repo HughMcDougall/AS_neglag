@@ -1,0 +1,18 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"conda"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "conda"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+/var/spool/slurm/d/job208074/slurm_script: line 13: conda: command not found
+/var/spool/slurm/d/job208074/slurm_script: line 14: conda: command not found
+Traceback (most recent call last):
+  File "/data/uqhmcdou/AS_neglag/AS_mock_run.py", line 7, in <module>
+    import litmus.fitting_methods
+ModuleNotFoundError: No module named 'litmus'

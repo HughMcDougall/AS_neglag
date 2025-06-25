@@ -1,16 +1,15 @@
 #!/bin/bash
-#SBATCH --job-name=neglag_fit              # Job name shown in squeue
-#SBATCH --output=logs/neglag_fit_%A_%a.out       # Std-out (A=array ID, a=task ID)
-#SBATCH --error=logs/neglag_fit_%A_%a.err        # Std-err
-#SBATCH --array=0-8                      # <-- 0,1,2,3,4,5,6,7,8
-#SBATCH --time=12:00:00                  # Wall-clock limit
-#SBATCH --cpus-per-task=4                # Cores per task
-#SBATCH --mem=16G                         # Memory per task
-# (Uncomment/adjust the next line if your cluster needs a partition)
-# #SBATCH --partition=short
+#SBATCH --job-name=neglag_fit
+#SBATCH --output=./logs/neglag_fit_%A_%a.out
+#SBATCH --error=./logs/neglag_fit_%A_%a.err
+#SBATCH --array=0-8
+#SBATCH --time=4:00:00
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=16G
+#SBATCH --partition=smp
 
 # Load modules or activate Conda/venv if needed
-module load anaconda3/5.2.0
+module load conda
 eval "$(conda shell.bash hook)"
 conda activate litmus01
 
