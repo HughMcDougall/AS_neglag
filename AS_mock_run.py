@@ -33,7 +33,6 @@ fitter = litmus.fitting_methods.nested_sampling(model,
                                                 verbose=10,
                                                 warn=10,
                                                 debug=10,
-                                                num_parallel_samplers = 4
                                                 )
 data = model.lc_to_data(lc_1, lc_2)
 
