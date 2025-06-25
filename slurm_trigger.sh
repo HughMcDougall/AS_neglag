@@ -9,7 +9,7 @@
 #SBATCH --partition=smp
 
 # Load modules or activate Conda/venv if needed
-module load conda
+module load anaconda3/2022.10
 eval "$(conda shell.bash hook)"
 conda activate litmus01
 
