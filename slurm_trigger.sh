@@ -3,11 +3,11 @@
 #SBATCH --output=./logs/neglag_fit_%A_%a.out
 #SBATCH --error=./logs/neglag_fit_%A_%a.err
 #SBATCH --array=0-8
-#SBATCH --time=12:00:00
+#SBATCH --time=24:00:00
 #SBATCH --cpus-per-task=4
-#SBATCH --mem=16G
+#SBATCH --mem=32G
 #SBATCH --partition=smp
-#SBATCH --mail-type = END,FAIL
+#SBATCH --mail-type=END
 #SBATCH --mail-user=hughmcdougallemail@gmail.com
 
 # Load modules or activate Conda/venv if needed
